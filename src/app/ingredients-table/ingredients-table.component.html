@@ -50,6 +50,10 @@
         </div>
         <div class="col-12 mt-5 mb-5">
 
+          <button mat-raised-button color="accent" (click)="showNutrition=!showNutrition">Show Total Nutrition</button>
+        </div>
+        <div class="col-12 mt-5 mb-5" *ngIf="showNutrition">
+
           <app-nutrition-facts [nutritionFacts]="totalDailyResponse"></app-nutrition-facts>
 
         </div>

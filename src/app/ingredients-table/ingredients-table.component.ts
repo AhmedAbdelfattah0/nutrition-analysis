@@ -11,7 +11,7 @@ export class IngredientsTableComponent implements OnInit, OnChanges,DoCheck {
  foodIngredients:any[]=[]
  totalDailyResponse:any
   displayedColumns: string[] = ['quantity', 'measure', 'foodMatch', 'calories', 'weight' ];
-
+  showNutrition:boolean
 
 
 
