@@ -1,0 +1,89 @@
+export interface NutritionFacts {
+  uri: string;
+  yield: number;
+  calories: number;
+  totalWeight: number;
+  dietLabels: string[];
+  healthLabels: string[];
+  cautions: any[];
+  totalNutrients: TotalNutrients;
+  totalDaily: TotalDaily;
+  totalNutrientsKCal: TotalNutrientsKCal;
+}
+
+
+interface TotalNutrientsKCal {
+  ENERC_KCAL: ENERCKCAL;
+  PROCNT_KCAL: ENERCKCAL;
+  FAT_KCAL: ENERCKCAL;
+  CHOCDF_KCAL: ENERCKCAL;
+}
+
+interface TotalDaily {
+  ENERC_KCAL: ENERCKCAL;
+  FAT: ENERCKCAL;
+  FATRN: ENERCKCAL;
+  FASAT: ENERCKCAL;
+  CHOCDF: ENERCKCAL;
+  FIBTG: ENERCKCAL;
+  PROCNT: ENERCKCAL;
+  CHOLE: ENERCKCAL;
+  NA: ENERCKCAL;
+  CA: ENERCKCAL;
+  MG: ENERCKCAL;
+  K: ENERCKCAL;
+  FE: ENERCKCAL;
+  ZN: ENERCKCAL;
+  P: ENERCKCAL;
+  VITA_RAE: ENERCKCAL;
+  VITC: ENERCKCAL;
+  THIA: ENERCKCAL;
+  RIBF: ENERCKCAL;
+  NIA: ENERCKCAL;
+  VITB6A: ENERCKCAL;
+  FOLDFE: ENERCKCAL;
+  VITB12: ENERCKCAL;
+  VITD: ENERCKCAL;
+  TOCPHA: ENERCKCAL;
+  VITK1: ENERCKCAL;
+}
+
+interface TotalNutrients {
+  ENERC_KCAL: ENERCKCAL;
+  FAT: ENERCKCAL;
+  FASAT: ENERCKCAL;
+  FAMS: ENERCKCAL;
+  FAPU: ENERCKCAL;
+  CHOCDF: ENERCKCAL;
+  FIBTG: ENERCKCAL;
+  SUGAR: ENERCKCAL;
+  PROCNT: ENERCKCAL;
+  CHOLE: ENERCKCAL;
+  NA: ENERCKCAL;
+  CA: ENERCKCAL;
+  MG: ENERCKCAL;
+  K: ENERCKCAL;
+  FE: ENERCKCAL;
+  ZN: ENERCKCAL;
+  P: ENERCKCAL;
+  VITA_RAE: ENERCKCAL;
+  VITC: ENERCKCAL;
+  THIA: ENERCKCAL;
+  RIBF: ENERCKCAL;
+  NIA: ENERCKCAL;
+  VITB6A: ENERCKCAL;
+  FOLDFE: ENERCKCAL;
+  FOLFD: ENERCKCAL;
+  FOLAC: ENERCKCAL;
+  VITB12: ENERCKCAL;
+  VITD: ENERCKCAL;
+  TOCPHA: ENERCKCAL;
+  VITK1: ENERCKCAL;
+  WATER: ENERCKCAL;
+}
+
+interface ENERCKCAL {
+  label: string;
+  quantity: number;
+  unit: string;
+}

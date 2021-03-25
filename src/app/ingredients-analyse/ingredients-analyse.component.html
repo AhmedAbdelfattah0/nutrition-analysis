@@ -1,0 +1,53 @@
+<div class="row m-4">
+  <div class="col-12 mb-3  ">
+    <button mat-raised-button color="primary" class="float-right" [disabled]="ingredientsControl.invalid" (click)="analyse()" >Analyse <mat-icon>analytics</mat-icon></button>
+  </div>
+  <div class="col-12">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Ingredients Analyse
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form   >
+          <div class="row">
+            <div class="col-md-4 col-12 offset-md-2">
+              <div class="row">
+                <div class="col-12 col-md-12">
+                  <mat-card-header>
+                    <mat-card-title>
+                      Add Food Ingredients
+                    </mat-card-title>
+                  </mat-card-header>
+                  <mat-form-field  appearance="outline" class="example-full-width">
+                    <mat-label>Add Food Ingredients</mat-label>
+                    <textarea [formControl]="ingredientsControl" matInput cols="10" rows="10" placeholder="Meat, 100, g " required></textarea>
+
+                  </mat-form-field>
+                  <mat-error *ngIf="ingredientsControl.invalid && ingredientsControl.touched  ">
+                    Food Ingredients is Required
+                  </mat-error>
+                  <mat-hint color="accent">
+                     Put all ingredient line by line. Each line should contain food name, quantity and unit
+                  </mat-hint>
+                </div>
+                <!-- <div class="col-12 col-md-12 mt-md-5 mt-3">
+                  <app-ingredients-table [foodIngredients]="ingredients" *ngIf="ingredients.length ===foodArrLength" ></app-ingredients-table>
+                </div> -->
+              </div>
+
+
+            </div>
+            <!-- <div class="col-md-4 col-12 offset-md-1 mt-md-0 mt-3" *ngIf="totalDailyResponse">
+              <app-nutrition-facts [nutritionFacts]="totalDailyResponse" ></app-nutrition-facts>
+            </div> -->
+          </div>
+        </form>
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
